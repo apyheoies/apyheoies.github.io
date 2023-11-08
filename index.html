@@ -97,18 +97,18 @@
       
         <h1 id="一、VMware的三种模式"><a href="#一、VMware的三种模式" class="headerlink" title="一、VMware的三种模式"></a>一、VMware的三种模式</h1><p>安装完成vmware以后</p>
 <p>进入虚拟机—&gt;&gt;设置—&gt;&gt;网络适配器</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/12431291/1698648859685-75fd88f5-8653-4cbc-ac76-a42d72fc036b.png" alt="img">在网络适配器中可以发现vmware为我们提供了三种网络工作模式，它们分别是：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/apyheoies/picgo@main//img1698648859685-75fd88f5-8653-4cbc-ac76-a42d72fc036b.png" alt="img">在网络适配器中可以发现vmware为我们提供了三种网络工作模式，它们分别是：</p>
 <ol>
 <li><p>Bridged（桥接模式）</p>
 </li>
 <li><p>NAT（网络地址转换模式）</p>
 </li>
 <li><p>Host-Only（仅主机模式）</p>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/12431291/1698648575625-9516a2f8-0949-4da7-ae7a-de7c43dbaccb.png" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/apyheoies/picgo@main//img1698648575625-9516a2f8-0949-4da7-ae7a-de7c43dbaccb.png" alt="image.png"></p>
 </li>
 </ol>
 <p>打开vmware虚拟机，我们可以在选项栏的<strong>“编辑”</strong>下的<strong>“虚拟网络编辑器”</strong>中看到 </p>
-<p> <img src="https://cdn.nlark.com/yuque/0/2023/png/12431291/1698649645023-7a18b156-374f-4166-b235-4a63713913e1.png" alt="image.png"></p>
+<p> <img src="https://cdn.jsdelivr.net/gh/apyheoies/picgo@main//img1698649645023-7a18b156-374f-4166-b235-4a63713913e1.png" alt="image.png"></p>
 <p>三种不同模式下对应的虚拟网卡名称，以及链接状态，IP地址网段等信息</p>
 <p><strong>作用：</strong>那么这些都是有什么作用呢？其实，</p>
 <ul>
@@ -120,7 +120,7 @@
 <p><img src="https://cdn.nlark.com/yuque/0/2023/png/12431291/1698652090195-b4ec3c14-c385-4919-a531-2b833b77d7b0.png" alt="img"></p>
 <h2 id="Bridged（桥接模式）"><a href="#Bridged（桥接模式）" class="headerlink" title="Bridged（桥接模式）"></a>Bridged（桥接模式）</h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p> 什么是桥接模式？桥接模式就是将主机网卡与虚拟机虚拟的网卡利用虚拟网桥进行通信。在桥接的作用下，类似于把物理主机虚拟为一个交换机，所有桥接设置的虚拟机连接到这个交换机的一个接口上，物理主机也同样插在这个交换机当中，所以所有桥接下的网卡与网卡都是交换模式的，相互可以访问而不干扰。在桥接模式下，虚拟机ip地址需要与主机在同一个网段，如果需要联网，则网关与DNS需要与主机网卡一致。  </p>
 <p> 其网络结构如下图所示：  </p>
-<p><img src="https://cdn.nlark.com/yuque/0/2023/png/12431291/1698652365472-4960acd3-0c59-4b17-98eb-0a3db9784364.png?x-oss-process=image/resize,w_750,limit_0" alt="image.png"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/apyheoies/picgo@main//img1698652365472-4960acd3-0c59-4b17-98eb-0a3db9784364.png" alt="image.png"></p>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>打开VMware的虚拟网络编辑器，将桥接模式下的虚拟网卡桥接到真实无线网卡或有线网卡。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/apyheoies/picgo@main//img1698664220737-0f892136-a418-4cdf-aee3-ce91e9041272.png" alt="image.png"></p>
 <p> 在物理机中通过win+r –&gt;cmd，进入win的命令行界面，输入命令ipconfig查看当前的网络连接信息。  </p>
